@@ -13,7 +13,7 @@ def async_aiohttp_get_all(urls: list) -> list:
         async with aiohttp.ClientSession() as session:
             async def fetch(url):
                 async with session.get(url) as response:
-                    return await response.json(), response.status
+                    return await response.content
             return await asyncio.gather(*[
                 fetch(url) for url in urls
             ])
