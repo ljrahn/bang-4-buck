@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="spinner.css" />
+  </head>
+  <body>
+    <div class="center">
+      <img src="./images/title.png" width="200px" alt="" />
+    </div>
+
+    <div id="refresh" class="center hidden">
+      <button
+        style="
+          background-color: white;
+          border: 0px;
+          cursor: pointer;
+          margin-bottom: -0.5rem;
+        "
+      >
+        <img src="./images/refresh.png" width="25px" alt="" />
+      </button>
+    </div>
+
+    <div id="error" class="error center hidden">
+      Error. Likely Invalid Page.
+    </div>
+
+    <div id="spinner" class="center hidden">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="center">
+      <div class="m-2">
+        <button
+          id="find-deal"
+          class="dealsBtn"
+          style="
+            padding-left: 1.9rem;
+            padding-right: 1.9rem;
+            padding-top: 0.9rem;
+            padding-bottom: 0.9rem;
+            font-size: 19px;
+            margin-top: 0.8rem;
+            margin-bottom: 0.4rem;
+          "
+        >
+          Find Deals
+        </button>
+      </div>
+      <div id="navigate-deals" class="m-1 hidden">
+        <button
+          id="prev"
+          class="btn m-2"
+          style="
+            padding-left: 0.9rem;
+            padding-right: 0.9rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          "
+        >
+          Prev
+        </button>
+        <div style="display: inline-block">
+          <span id="current-page" style="font-size: 15px"></span
+          ><span style="font-size: 15px">/</span
+          ><span id="total-pages" style="font-size: 15px"></span>
+        </div>
+        <button
+          id="next"
+          class="btn m-1"
+          style="
+            padding-left: 0.9rem;
+            padding-right: 0.9rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          "
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>

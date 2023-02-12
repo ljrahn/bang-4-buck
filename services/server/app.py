@@ -2,8 +2,11 @@ from flask import Flask, Blueprint, request, jsonify, abort, make_response
 from bs4 import BeautifulSoup
 from utils.helper_functions import async_aiohttp_get_all
 import requests
+from flask_cors import CORS
+import time
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 #thanks chatGPT
 
@@ -31,13 +34,12 @@ def get_best_deal():
     pages = ["https://www.kijiji.ca" + dirtyPage.get("href") for dirtyPage in dirtyPages]
     numberPages = str(dirtyPages).count("href") - 1
     pages = pages[:numberPages-1]
-    print(pages)
     
     if numberPages > 0:
-        content_list = async_aiohttp_get_all(pages)
-        print(content_list[0])
-        for content in content_list:
-            s = BeautifulSoup(content, 'html.parser')
+
+        results = async_aiohttp_get_all(pages)
+        for result in results:
+            s = BeautifulSoup(result, 'html.parser')
             dirtyPrices = s.find_all('div', class_='price')
             dirtyTitles = s.find_all('a', class_='title')
             dirtyKms = s.find_all('div', class_='details')
@@ -46,6 +48,7 @@ def get_best_deal():
             years.extend([dirtyTitle.text.strip()[:4] for dirtyTitle in dirtyTitles])
             kms.extend([''.join(filter(str.isdigit, dirtyKm.text)) for dirtyKm in dirtyKms])
             urls.extend(["https://www.kijiji.ca" + dirtyUrl.get("href") for dirtyUrl in dirtyUrls])
+        
 
     # for year in years: print("Year:",year)
     # for km in kms: print("Km:",km)

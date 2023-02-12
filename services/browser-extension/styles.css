@@ -1,0 +1,106 @@
+body {
+  width: 200px;
+  border-radius: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.m-1 {
+  margin: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.m-3 {
+  margin: 1rem;
+}
+
+.m-4 {
+  margin: 1.5rem;
+}
+
+.m-5 {
+  margin: 2rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 1rem;
+}
+
+.p-4 {
+  padding: 1.5rem;
+}
+
+.p-5 {
+  padding: 2rem;
+}
+
+.btn {
+  background-color: #373373;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0px;
+}
+
+.btn:hover {
+  background-color: #443f82;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0px;
+}
+
+.dealsBtn {
+  background-color: white;
+  color: #373373;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid;
+  border-color: #cacaea;
+  font-weight: 700;
+  transition: 0.4s;
+}
+
+.dealsBtn:hover {
+  background-color: #373373;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid;
+  border-color: #373373;
+  font-weight: 700;
+}
+
+.error {
+  background-color: red;
+  width: 100px;
+  border-radius: 6px;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}

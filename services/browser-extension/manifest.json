@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Bang For Buck",
+  "description": "Fetch the best car deals from a second hand marketplace",
+  "version": "1.0",
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["tabs", "storage", "scripting", "activeTab", "cookies"]
+}
