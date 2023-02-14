@@ -8,6 +8,8 @@ Start the server:
 
 ```
 cd services/server
+python3 -m venv venv    (macos)
+pip3 install -r requirements.txt     (macos)
 flask run
 ```
 
